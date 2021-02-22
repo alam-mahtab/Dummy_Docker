@@ -1,0 +1,8 @@
+version: '3.7'
+services: 
+  fast_api:
+      build: .
+      container_name: "fast-api-container"
+      restart: "always"
+      ports: 
+      - "8100:15400"
