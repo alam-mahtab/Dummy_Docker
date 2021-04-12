@@ -36,10 +36,10 @@ async def read_root():
     return {"message" : "Hello world"}
 
 from module1 import controller 
-app.include_router(controller.router, prefix="/demo", tags=["Demo"])
+app.include_router(controller.router, prefix="/demo", tags=["Demo using query method"])
 
 from module2 import controller 
-app.include_router(controller.router, prefix="/test", tags=["Test"])
+app.include_router(controller.router, prefix="/body", tags=["Demo using Body method"])
 
 from api import ping
 app.include_router(ping.router)
