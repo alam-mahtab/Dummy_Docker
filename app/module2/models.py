@@ -13,3 +13,4 @@ class Create(Base):
     last_name = Column(String)
     status = Column(String)
     
+    

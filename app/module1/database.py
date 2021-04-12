@@ -6,7 +6,7 @@ import os
 
 SQLALCHEMY_DATABASE_URL = "sqlite:///./test1.db"
 # For local connection
-#SQLALCHEMY_DATABASE_URL = "postgresql://postgres:1234@127.0.0.1/talent&course" 
+#SQLALCHEMY_DATABASE_URL = "postgresql://postgres:1234@127.0.0.1/tal&co" 
 
 #SQLALCHEMY_DATABASE_URL ="psql --host=cd.csorhad7ihl5.ap-south-1.rds.amazonaws.com --port=5432 --username=postgres --password=Mobirizer12345 --dbname=cd"
 # For aws connection
@@ -23,7 +23,8 @@ database =databases.Database(SQLALCHEMY_DATABASE_URL)
 
 
 engine = create_engine(
-    SQLALCHEMY_DATABASE_URL, connect_args={}
+    SQLALCHEMY_DATABASE_URL
+    #, connect_args={}
 )
 SessionLocal = sessionmaker(autoflush=False ,bind=engine, expire_on_commit=False)
 
